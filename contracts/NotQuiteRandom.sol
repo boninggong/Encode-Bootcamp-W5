@@ -7,11 +7,11 @@ contract NotQuiteRandom {
         view
         returns (uint256 notQuiteRandomNumber)
     {
-        // block.number
-        // TODO: get randomness from block hash
+        return uint256(blockhash(block.number - 1));
+
     }
 
     function tossCoin() public view returns (bool heads) {
-        // TODO: make the random number be translated to a boolean
+        return getRandomNumber() % 2 == 0;
     }
 }

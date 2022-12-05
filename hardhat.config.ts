@@ -42,6 +42,7 @@ const config: HardhatUserConfig = {
         mnemonic: MNEMONIC,
       },
       chainId: chainIds.hardhat,
+      hardfork: "merge",
     },
     // mainnet: {
     //   chainId: chainIds.mainnet,
